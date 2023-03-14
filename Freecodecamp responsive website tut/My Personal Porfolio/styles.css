@@ -1,0 +1,208 @@
+:root {
+    --main-white: #f0f0f0;
+    --main-purple: #7F00FF;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+    
+}
+html{
+    scroll-behavior:smooth;
+
+    font-size: 62.5%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "poppins", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--main-white);
+}
+nav{
+    display: flex;
+    justify-content: flex-end;
+    background: var(--main-purple);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 0 rgb(0 0 0 / 40%);
+    z-index: 10;
+}
+nav > ul{
+    display: flex;
+    margin-right: 2.2rem;
+    list-style-type: none;
+}
+nav li:hover{
+background-color: var(--main-blue);
+}
+nav a{
+    display: block;
+    color: var(--main-white);
+    text-decoration: none;
+    padding: 2rem;
+    font-size: 2.2rem;
+}
+.welcome-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+h1{
+    font-size:6rem;
+}
+h1, h2{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+#welcome-section > p{
+    font-size: 3rem;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--main-purple);
+}
+.projects-section{
+    text-align: center;
+    padding: 10rem 2rem;
+    background: var(--main-blue);
+}
+.projects-section-header{
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid var(--main-white);
+}
+h2{
+    font-size:4.2rem;
+}
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+.projects-grid > a{
+    text-decoration: none;
+    background-color: var(--main-gray);
+}
+.projects-grid p{
+    color: var(--main-white);
+}
+.project{
+background-color: var(--main-gray);
+box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
+border-radius: 2px;
+}
+.project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+}
+.project-title{
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
+}
+.code {
+    color: var(--main-gray);
+    transition-property: color;
+    transition-duration:  0.3s;
+     transition-timing-function: ease-out;
+}
+.project-title:hover .code{
+    color: var(--main-purple);
+
+}
+.btn-show-all{
+    font-size: 2rem;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: var(--main-gray);
+    padding: 1rem 2rem;
+    transition: background 0.3s ease-out;
+    border-radius: 2px;
+}
+.btn-show-all:hover{
+    background-color: var(--main-purple);
+}
+.btn-show-all > i {
+    font-size: 2rem;
+  margin-left: 10px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+.btn-show-all:hover > i {
+  transform: translateX(2px);
+}
+.contacts-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    text-align: center;
+    width: 100%;
+    padding: 0 2rem;
+    background-color: var(--main-gray);
+
+}
+.contact-section-header h2 {
+    font-size: 6rem;
+}
+.contact-section-header p{
+    font-style: italic;
+}
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+.contact-details {
+    font-size: 2.4rem;
+    text-decoration: none;
+    color: var(--main-white);
+    padding: 1rem 2rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+}
+.contact-details:hover{
+    transform: translateY(8px);
+}
+footer {
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background: var(--main-gray);
+    border-top: 4px solid var(--main-purple);
+}
+footer > p {
+    margin: 2rem;
+}
+footer a{  text-decoration: none;
+    color: var(--main-white);
+    font-style: italic
+}
+
+@media (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
